@@ -6,7 +6,10 @@ This ETL process implements Slowly Changing Dimension (SCD) Type 1 in Informatic
 
 ### 2. Data Flow Diagram
 
-![Data Flow Diagram](SCD Type 1 Diagram.png)
+![SCD Type 1 Diagram](D:\edu\SCD%20%20Types%20%20Using%20%20Informatica%20%20Power%20%20Center\SCD%20%20Type%20%201\SCD%20%20Type%20%201%20%20Diagram.png)
+
+
+
 
 ## 3. Source and Target Tables
 
@@ -104,7 +107,7 @@ This ETL process implements Slowly Changing Dimension (SCD) Type 1 in Informatic
 
 ### Target After First Run
 
-![TGt_After First Run](TGT_Data_After First Run.png)
+![TGt_After First Run](D:\edu\SCD%20%20Types%20%20Using%20%20Informatica%20%20Power%20%20Center\SCD%20%20Type%20%201\TGT_Data_After%20%20First%20%20Run.png)
 
 ### Test Case 2: Insertion of New Employees
 
@@ -132,7 +135,7 @@ This ETL process implements Slowly Changing Dimension (SCD) Type 1 in Informatic
 
 ## 6. Final Data in Target Table (After 2nd Run)
 
-![TGt_After Second Run](TGT_Data_Second Run.png)
+![TGt_After Second Run](D:\edu\SCD%20%20Types%20%20Using%20%20Informatica%20%20Power%20%20Center\SCD%20%20Type%20%201\TGT_Data_Second%20%20Run.png)
 
 ## 7. Conclusion
 
