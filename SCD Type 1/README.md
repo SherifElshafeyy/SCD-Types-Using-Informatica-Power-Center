@@ -6,7 +6,7 @@ This ETL process implements Slowly Changing Dimension (SCD) Type 1 in Informatic
 
 ### 2. Data Flow Diagram
 
-![SCD Type 1 Diagram](D:\edu\SCD%20%20Types%20%20Using%20%20Informatica%20%20Power%20%20Center\SCD%20%20Type%20%201\SCD%20%20Type%20%201%20%20Diagram.png)
+![SCD Type 1 Diagram](SCD\Type\1/SCD\Type\1\Diagram.png)
 
 
 

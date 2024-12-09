@@ -12,6 +12,6 @@ This repository contains implementations of Slowly Changing Dimension (SCD) type
 ### How to Use This Repository
 
 1. Clone the repository:  
-   `git clone https://github.com/your-username/SCD-Implementation.git`
+   `https://github.com/SherifElshafeyy/SCD-Types-Using-Informatica-Power-Center.git`
 2. Navigate to the SCD Type you’re interested in.
 3. Follow the instructions in the respective `README.md` file for implementation details.
