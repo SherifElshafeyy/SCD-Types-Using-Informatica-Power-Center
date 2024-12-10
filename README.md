@@ -4,8 +4,8 @@ This repository contains implementations of Slowly Changing Dimension (SCD) type
 
 ## SCD Types Covered
 
-1. **SCD Type 1** -
-2. **SCD Type 2** - (Coming soon)
+1. **SCD Type 1**
+2. **SCD Type 2**
 3. **SCD Type 3** - (Coming soon)
 4. **SCD Type 4** - (Coming soon)
 
