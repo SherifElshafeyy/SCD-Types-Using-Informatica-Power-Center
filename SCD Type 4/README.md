@@ -74,7 +74,8 @@ The data from the source table (`SRC_EMP_SCD4`) is passed through the Source Qua
 - **LKB_TGT_EMP_HISTORY:**  
   - Performs a lookup on the history table (`TGT_EMP_SCD4_HISTORY`) with the condition:  
 
-    ```employee_id (source) = employee_id (target)
+    ```
+    employee_id (source) = employee_id (target)
     ```
 
   - Returns the following fields from the history table:
@@ -83,7 +84,8 @@ The data from the source table (`SRC_EMP_SCD4`) is passed through the Source Qua
 - **LKB_TGT_ACTIVE:**  
   - Performs a lookup on the active table (`TGT_EMP_SCD4_ACTIVE`) with the condition:  
 
-    ```employee_id (source) = employee_id (target)
+    ```
+    employee_id (source) = employee_id (target)
     ```
 
   - Returns the following fields from the active table:
@@ -106,20 +108,23 @@ The following steps occur in the **Expression Transformation** (`EXP_SCD4`):
 1. **SRC_MD5:**  
    - Calculates the MD5 hash of the concatenated fields `phone_number`, `salary`, and `department` from the source.  
 
-   ```MD5(PHONE_NUMBER || SALARY || DEPARTMENT)
+   ```
+   MD5(PHONE_NUMBER || SALARY || DEPARTMENT)
    ```
 
 2. **TGT_HISTORY_MD5:**
 Calculates the MD5 hash of the concatenated fields `phone_number`, `salary`, and `department` from the history table.
 
- ```MD5(LKB_HISTORY_PHONE_NUMBER || LKB_HISTORY_SALARY || LKB_HISTORY_DEPARTMENT)
+ ```
+ MD5(LKB_HISTORY_PHONE_NUMBER || LKB_HISTORY_SALARY || LKB_HISTORY_DEPARTMENT)
  ```
 
 3. **TGT_ACTIVE_MD5:**
 
 Calculates the MD5 hash of the concatenated fields phone_number, salary, and department from the active table.
 
- ```MD5(LKB_ACTIVE_PHONE_NUMBER || LKB_ACTIVE_SALARY ||  LKB_ACTIVE_DEPARTMENT)
+ ```
+ MD5(LKB_ACTIVE_PHONE_NUMBER || LKB_ACTIVE_SALARY ||  LKB_ACTIVE_DEPARTMENT)
  ```
 
 ### Output Fields
@@ -127,37 +132,43 @@ Calculates the MD5 hash of the concatenated fields phone_number, salary, and dep
 1. **O_fullname**:
   Concatenates `first_name` and `last_name`.
 
-  ```CONCAT(first_name, last_name)
+  ```
+  CONCAT(first_name, last_name)
   ```
 
 2. **O_insert_active**:
   Determines if a new record should be inserted into the active target table.
 
-  ```IIF(ISNULL(LKB_ACTIVE_EMP_KEY), 1, 0)
+  ```
+  IIF(ISNULL(LKB_ACTIVE_EMP_KEY), 1, 0)
   ```
 
 3. **O_insert_history**:
   Determines if a new record should be inserted into the history table.
 
-  ```IIF(ISNULL(LKB_HISTORY_EMP_KEY) OR (NOT ISNULL(LKB_HISTORY_EMP_KEY)) AND (SRC_MD5 != TGT_HISTORY_MD5), 1, 0)
+  ```
+  IIF(ISNULL(LKB_HISTORY_EMP_KEY) OR (NOT ISNULL(LKB_HISTORY_EMP_KEY)) AND (SRC_MD5 != TGT_HISTORY_MD5), 1, 0)
   ```
 
 4. **O_update_active**:
   Determines if an existing record in the active table should be updated.
 
-  ```IIF(NOT ISNULL(LKB_ACTIVE_EMP_KEY) AND (SRC_MD5 != TGT_ACTIVE_MD5), 1, 0)
+  ```
+  IIF(NOT ISNULL(LKB_ACTIVE_EMP_KEY) AND (SRC_MD5 != TGT_ACTIVE_MD5), 1, 0)
   ```
 
 5. **O_update_history:**
  Determines if an existing record in the history table should be updated.
 
- ```IIF(NOT ISNULL(LKB_HISTORY_EMP_KEY) AND (SRC_MD5 != TGT_HISTORY_MD5), 1, 0)
+ ```
+ IIF(NOT ISNULL(LKB_HISTORY_EMP_KEY) AND (SRC_MD5 != TGT_HISTORY_MD5), 1, 0)
  ```
 
 6. **O_enddate**:
   Sets the `end_date` for records that are moving to the history table.
 
-  ```ADD_TO_DATE(SUBMISSION_DATE, 'DD', -1)
+  ```
+  ADD_TO_DATE(SUBMISSION_DATE, 'DD', -1)
   ```
 
 ### 4. Router Transformation
