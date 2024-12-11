@@ -181,13 +181,13 @@ In the second load, two new employees are added, and the salary and department o
 
 | employee_id | first_name | last_name | phone_number | hire_date  | salary | department        | submission_date |
 |-------------|------------|-----------|--------------|------------|--------|-------------------|-----------------|
-| 1           | Michael    | Scott     | 123-456-7890 | 2001-04-01 | 90000  | Regional Manager  | 2024-12-13      |
-| 2           | Dwight     | Schrute   | 234-567-8901 | 2004-05-15 | 65000  | Sales             | 2024-12-13      |
-| 3           | Jim        | Halpert   | 345-678-9012 | 2006-06-20 | 60000  | Product Development | 2024-12-13      |
-| 4           | Pam        | Beesly    | 456-789-0123 | 2005-07-10 | 48000  | HR                | 2024-12-13      |
-| 5           | Ryan       | Howard    | 567-890-1234 | 2007-01-15 | 42000  | HR                | 2024-12-13      |
+| 1           | Michael    | Scott     | 123-456-7890 | 2001-04-01 | 85000  | Management        | 2024-12-12      |
+| 2           | Dwight     | Schrute   | 234-567-8901 | 2004-05-15 | 65000  | Sales             | 2024-12-12      |
+| 3           | Jim        | Halpert   | 345-678-9012 | 2006-06-20 | 58000  | Marketing         | 2024-12-12      |
+| 4           | Pam        | Beesly    | 456-789-0123 | 2005-07-10 | 48000  | HR                | 2024-12-12      |
+| 5           | Ryan       | Howard    | 567-890-1234 | 2007-01-15 | 42000  | HR                | 2024-12-12      |
 | 6           | Kelly      | Kapoor    | 678-901-2345 | 2008-03-15 | 45000  | Customer Service  | 2024-12-13      |
-| 7           | Toby       | Flenderson| 789-012-3456 | 2003-09-10 | 50000  | Legal             | 2024-12-13      |
+| 7           | Toby       | Flenderson| 789-012-3456 | 2003-09-10 | 47000  | HR                | 2024-12-12      |
 
 ### Target After Second Run
 
